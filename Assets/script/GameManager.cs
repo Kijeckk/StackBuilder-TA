@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,12 +12,17 @@ public class GameManager : MonoBehaviour
     private CameraFollow cam;
     private float currentSizeX = 3f;
 
+    private int score = 0;
+    public TextMeshProUGUI scoreText;
+
     void Start()
     {
         lastBlock = GameObject.Find("StartBlock").transform;
 
         cam = Camera.main.GetComponent<CameraFollow>();
         cam.SetTarget(lastBlock);
+
+        scoreText.text = "Score: 0";
         
         SpawnBlock();
         
@@ -32,34 +40,58 @@ public class GameManager : MonoBehaviour
 }
 
     public void PlaceBlock(Block current)
+{
+    Transform currentBlock = current.transform;
+
+    float hangover = currentBlock.position.x - lastBlock.position.x;
+
+    // ✅ PERFECT CHECK
+    bool isPerfect = Mathf.Abs(hangover) < 0.05f;
+
+    float maxSize = lastBlock.localScale.x;
+    float overlap = maxSize - Mathf.Abs(hangover);
+
+    if (overlap <= 0)
     {
-        Transform currentBlock = current.transform;
-
-        float hangover = currentBlock.position.x - lastBlock.position.x;
-        float maxSize = lastBlock.localScale.x;
-        float overlap = maxSize - Mathf.Abs(hangover);
-
-        if (overlap <= 0)
-        {
-            Debug.Log("Game Over");
-            return;
-        }
-
-        // Resize block
-        Vector3 newScale = currentBlock.localScale;
-        newScale.x = overlap;
-        currentBlock.localScale = newScale;
-
-        // 🔥 TAMBAHKAN INI
-        currentSizeX = overlap;
-
-        // Reposition
-        float newX = lastBlock.position.x + (hangover / 2);
-        currentBlock.position = new Vector3(newX, currentBlock.position.y, currentBlock.position.z);
-
-        lastBlock = currentBlock;
-        cam.SetTarget(lastBlock);
-
-        SpawnBlock();
+        Debug.Log("Game Over");
+        return;
     }
+
+    // 🔥 SCORING SYSTEM
+    if (isPerfect)
+    {
+        score += 2;
+        Debug.Log("PERFECT! Score: " + score);
+    }
+    else
+    {
+        score++;
+        Debug.Log("Score: " + score);
+    }
+
+    scoreText.text = "Score: " + score;
+
+    // 🔥 PERFECT SNAP (biar pas banget)
+    if (isPerfect)
+    {
+        overlap = maxSize;
+        currentBlock.position = new Vector3(lastBlock.position.x, currentBlock.position.y, currentBlock.position.z);
+    }
+
+    // Resize block
+    Vector3 newScale = currentBlock.localScale;
+    newScale.x = overlap;
+    currentBlock.localScale = newScale;
+
+    currentSizeX = overlap;
+
+    // Reposition
+    float newX = lastBlock.position.x + (hangover / 2);
+    currentBlock.position = new Vector3(newX, currentBlock.position.y, currentBlock.position.z);
+
+    lastBlock = currentBlock;
+    cam.SetTarget(lastBlock);
+
+    SpawnBlock();
+}
 }
