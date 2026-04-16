@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     private int score = 0;
     public TextMeshProUGUI scoreText;
+    public GameObject gameOverUI;
 
     void Start()
     {
@@ -51,14 +52,18 @@ public class GameManager : MonoBehaviour
     float maxSize = lastBlock.localScale.x;
     float overlap = maxSize - Mathf.Abs(hangover);
 
-    if (overlap <= 0)
-    {
-        Debug.Log("Game Over");
-        return;
-    }
+        if (overlap <= 0)
+        {
+            Debug.Log("Game Over");
 
-    // 🔥 SCORING SYSTEM
-    if (isPerfect)
+            gameOverUI.SetActive(true); // munculin UI
+            Time.timeScale = 0f; // pause game
+
+            return;
+        }
+
+        // 🔥 SCORING SYSTEM
+        if (isPerfect)
     {
         score += 2;
         Debug.Log("PERFECT! Score: " + score);
@@ -68,6 +73,7 @@ public class GameManager : MonoBehaviour
         score++;
         Debug.Log("Score: " + score);
     }
+
 
     scoreText.text = "Score: " + score;
 
@@ -93,5 +99,11 @@ public class GameManager : MonoBehaviour
     cam.SetTarget(lastBlock);
 
     SpawnBlock();
+
 }
+    public void RestartGame()
+    {
+        Time.timeScale = 1f; // balikin waktu normal
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
