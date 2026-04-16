@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private Transform lastBlock;
     private float blockHeight = 1f;
     private CameraFollow cam;
+    private float currentSizeX = 3f;
 
     void Start()
     {
@@ -20,12 +21,15 @@ public class GameManager : MonoBehaviour
     }
 
     void SpawnBlock()
-    {
-        Vector3 pos = lastBlock.position + Vector3.up * blockHeight;
-        GameObject newBlock = Instantiate(blockPrefab, pos, Quaternion.identity);
+{
+    Vector3 pos = lastBlock.position + Vector3.up * blockHeight;
+    GameObject newBlock = Instantiate(blockPrefab, pos, Quaternion.identity);
 
-        newBlock.GetComponent<Renderer>().material.color = Random.ColorHSV();
-    }
+    // 🔥 SET SIZE SESUAI HASIL POTONGAN
+    newBlock.transform.localScale = new Vector3(currentSizeX, 1f, 3f);
+
+    newBlock.GetComponent<Renderer>().material.color = Random.ColorHSV();
+}
 
     public void PlaceBlock(Block current)
     {
@@ -45,6 +49,9 @@ public class GameManager : MonoBehaviour
         Vector3 newScale = currentBlock.localScale;
         newScale.x = overlap;
         currentBlock.localScale = newScale;
+
+        // 🔥 TAMBAHKAN INI
+        currentSizeX = overlap;
 
         // Reposition
         float newX = lastBlock.position.x + (hangover / 2);
