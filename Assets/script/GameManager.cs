@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private int score = 0;
     public TextMeshProUGUI scoreText;
     public GameObject gameOverUI;
+    public GameObject optionsUI;
 
     void Start()
     {
@@ -27,6 +28,30 @@ public class GameManager : MonoBehaviour
         
         SpawnBlock();
         
+    }
+
+    public void OpenOptions()
+    {
+        optionsUI.SetActive(true);
+        Time.timeScale = 0f; // pause game
+    }
+
+    public void ResumeGame()
+    {
+        optionsUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void BackToMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Menu");
     }
 
     void SpawnBlock()
@@ -101,9 +126,5 @@ public class GameManager : MonoBehaviour
     SpawnBlock();
 
 }   
-    public void RestartGame()
-    {
-        Time.timeScale = 1f; // balikin waktu normal
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    
 }
