@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
 
     SpawnBlock();
 
-}
+}   
     public void RestartGame()
     {
         Time.timeScale = 1f; // balikin waktu normal
