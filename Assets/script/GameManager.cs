@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject gameOverUI;
     public GameObject optionsUI;
+    public bool isPaused = false;
 
     void Start()
     {
@@ -31,15 +32,17 @@ public class GameManager : MonoBehaviour
     }
 
     public void OpenOptions()
-    {
-        optionsUI.SetActive(true);
-        Time.timeScale = 0f; // pause game
-    }
+{
+    optionsUI.SetActive(true);
+    Time.timeScale = 0f;
+    isPaused = true;
+}
 
     public void ResumeGame()
     {
         optionsUI.SetActive(false);
         Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public void RestartGame()
