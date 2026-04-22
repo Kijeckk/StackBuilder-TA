@@ -22,14 +22,6 @@ public class GameManager : MonoBehaviour
 {
     lastBlock = GameObject.Find("StartBlock").transform;
 
-    // 🔥 FIX START BLOCK BIAR GAK NEMBUS
-    Renderer r = lastBlock.GetComponent<Renderer>();
-    float height = r.bounds.size.y;
-
-    Vector3 pos = lastBlock.position;
-    pos.y = height / 2f; // angkat setengah tinggi
-    lastBlock.position = pos;
-
     cam = Camera.main.GetComponent<CameraFollow>();
     cam.SetTarget(lastBlock);
 
@@ -66,23 +58,25 @@ public class GameManager : MonoBehaviour
 
     void SpawnBlock()
 {
-    // 🔥 ambil renderer (biar tau ukuran asli di dunia)
     Renderer lastRenderer = lastBlock.GetComponent<Renderer>();
 
     float height = lastRenderer.bounds.size.y;
-
-    // 🔥 ambil posisi TOP dari block lama
     float topY = lastRenderer.bounds.max.y;
 
     Vector3 pos = new Vector3(
         lastBlock.position.x,
-        topY + (height / 2f), // spawn di atasnya
+        topY + (height / 2f),
         lastBlock.position.z
     );
 
     GameObject newBlock = Instantiate(blockPrefab, pos, Quaternion.identity);
 
-    newBlock.transform.localScale = new Vector3(currentSizeX, 1f, currentSizeX);
+    newBlock.transform.position = new Vector3(
+    lastBlock.position.x,
+    pos.y,
+    lastBlock.position.z
+);
+    newBlock.transform.localScale = new Vector3(currentSizeX, 0.2f, currentSizeX);
 
     newBlock.GetComponent<Renderer>().material.color = Random.ColorHSV();
 }
