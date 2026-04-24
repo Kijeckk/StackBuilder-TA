@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
 
         Vector3 pos = transform.position;
         pos.y = Mathf.Lerp(pos.y, target.position.y + 5, Time.deltaTime * 2);
-        pos.z = -10;
+        pos.z = -15;
         transform.position = pos;
     }
 }

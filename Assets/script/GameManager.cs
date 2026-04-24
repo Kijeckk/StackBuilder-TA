@@ -83,8 +83,6 @@ public class GameManager : MonoBehaviour
 
         newBlock.transform.localScale = lastBlock.localScale;
 
-        newBlock.GetComponent<Renderer>().material.color = Random.ColorHSV();
-
         // 🔥 BARU SET SPEED (SETELAH ADA OBJECT)
         Block blockScript = newBlock.GetComponent<Block>();
 
