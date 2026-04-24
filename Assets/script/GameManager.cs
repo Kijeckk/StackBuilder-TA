@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
@@ -17,25 +17,26 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject optionsUI;
     public bool isPaused = false;
+    public float blockSpeed = 2f;
+    public float maxSpeed = 6f;
+    public float minSpeed = 1f;
+    private int highScore = 0;
+    public TextMeshProUGUI highScoreText;
 
     void Start()
 {
     lastBlock = GameObject.Find("StartBlock").transform;
 
-    // 🔥 FIX START BLOCK BIAR GAK NEMBUS
-    Renderer r = lastBlock.GetComponent<Renderer>();
-    float height = r.bounds.size.y;
-
-    Vector3 pos = lastBlock.position;
-    pos.y = height / 2f; // angkat setengah tinggi
-    lastBlock.position = pos;
-
     cam = Camera.main.GetComponent<CameraFollow>();
     cam.SetTarget(lastBlock);
 
     scoreText.text = "Score: 0";
+        // 🔥 HIGH SCORE LOAD
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highScoreText.text = "High Score: " + highScore;
 
-    SpawnBlock();
+
+        SpawnBlock();
 }
 
     public void OpenOptions()
@@ -65,49 +66,76 @@ public class GameManager : MonoBehaviour
     }
 
     void SpawnBlock()
-{
-    // 🔥 ambil renderer (biar tau ukuran asli di dunia)
-    Renderer lastRenderer = lastBlock.GetComponent<Renderer>();
+    {
+        Renderer lastRenderer = lastBlock.GetComponent<Renderer>();
 
-    float height = lastRenderer.bounds.size.y;
+        float height = lastRenderer.bounds.size.y;
+        float topY = lastRenderer.bounds.max.y;
 
-    // 🔥 ambil posisi TOP dari block lama
-    float topY = lastRenderer.bounds.max.y;
+        Vector3 pos = new Vector3(
+            lastBlock.position.x,
+            topY + (height / 2f),
+            lastBlock.position.z
+        );
 
-    Vector3 pos = new Vector3(
-        lastBlock.position.x,
-        topY + (height / 2f), // spawn di atasnya
-        lastBlock.position.z
-    );
+        // 🔥 BUAT DULU BLOCKNYA
+        GameObject newBlock = Instantiate(blockPrefab, pos, Quaternion.identity);
 
-    GameObject newBlock = Instantiate(blockPrefab, pos, Quaternion.identity);
+        newBlock.transform.localScale = lastBlock.localScale;
 
-    newBlock.transform.localScale = new Vector3(currentSizeX, 1f, currentSizeX);
+        newBlock.GetComponent<Renderer>().material.color = Random.ColorHSV();
 
-    newBlock.GetComponent<Renderer>().material.color = Random.ColorHSV();
-}
+        // 🔥 BARU SET SPEED (SETELAH ADA OBJECT)
+        Block blockScript = newBlock.GetComponent<Block>();
 
-   public void PlaceBlock(Block current)
+        if (blockScript != null)
+        {
+            blockScript.speed = blockSpeed;
+        }
+    }
+
+    public void PlaceBlock(Block current)
 {
     Transform currentBlock = current.transform;
 
     float hangover = Mathf.Abs(currentBlock.position.x - lastBlock.position.x);
+        if (hangover < 0.1f) // PERFECT
+        {
+            blockSpeed += 0.5f;
+        }
+        else if (hangover > 0.5f) // MISS
+        {
+            blockSpeed -= 0.4f;
+        }
 
-    float shrinkAmount = hangover * 0.5f;
+        blockSpeed = Mathf.Clamp(blockSpeed, minSpeed, maxSpeed);
+
+        float shrinkAmount = hangover * 0.5f;
 
     Vector3 newScale = currentBlock.localScale;
     newScale.x -= shrinkAmount;
     newScale.z -= shrinkAmount;
 
-    if (newScale.x <= 0.3f)
-    {
-        Debug.Log("Game Over");
-        gameOverUI.SetActive(true);
-        Time.timeScale = 0f;
-        return;
-    }
+        if (newScale.x <= 0.3f)
+        {
+            Debug.Log("Game Over");
 
-    currentBlock.localScale = newScale;
+            // 🔥 CEK HIGH SCORE
+            if (score > highScore)
+            {
+                highScore = score;
+                PlayerPrefs.SetInt("HighScore", highScore);
+                PlayerPrefs.Save();
+            }
+
+            highScoreText.text = "High Score: " + highScore;
+
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
+            return;
+        }
+
+        currentBlock.localScale = newScale;
 
     float newX = Mathf.Lerp(currentBlock.position.x, lastBlock.position.x, 0.5f);
 

@@ -1,0 +1,686 @@
+fileFormatVersion: 2
+guid: 3cc8363c159da1b45a339e9bd3c163de
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 413
+        width: 162
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69da8e1de946d54db9af49e5fe83fde
+      internalID: 2107066771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 413
+        width: 161
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7886ff739b2ea864c81cf1892b37d175
+      internalID: 633559756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 413
+        width: 162
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1979a2d186419db4492a48f0eb36b336
+      internalID: -668283425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 329
+        width: 162
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba48c81b9f5f8184dada8ac08ed2b5ac
+      internalID: 881350079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 329
+        width: 161
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e595c966e949f4eba3b129639c4291
+      internalID: 539583446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 329
+        width: 162
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532ba47422d6d9c41aedb5649a566d37
+      internalID: -517514633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 230
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf045f2497f0df4898a55d80023c15d
+      internalID: 1752170740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 230
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd5e76a3b238514a82d0fdced42795c
+      internalID: 560715488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 230
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a756b4f6da0f5f4ca3947d2afd3a761
+      internalID: 1040895902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 230
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973bf3976d73014478e7297fd9559432
+      internalID: 931028493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 230
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f698c518069db4485717c6090069a4
+      internalID: 1823079158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 230
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33f516d85f636445b3cf123e4df922e
+      internalID: -87910939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 131
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de247a0fe0a78f42a34f45f79dc6aa7
+      internalID: 711279711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 131
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17b88582d4a85147802ca5468df1107
+      internalID: -1535754610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 131
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1091c462a30f01348833261d71206a18
+      internalID: -1615770640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 131
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87140dc5a32ae4742a6b12bf46f71f0f
+      internalID: 1913262940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 131
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55befba4b16af54e8f791ca16acb35a
+      internalID: 672027743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 131
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c26822853bdcd940bb371b155b9f72e
+      internalID: -1999278969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 28
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d2d546df53f9e4e8335bb06d955ccd
+      internalID: 23323509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 28
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55e54520792aa34ea87fcb3fd4386eb
+      internalID: -2111972283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 28
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df96ca0d94ef2cd4aa93846b0791cc9e
+      internalID: -1459129790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 28
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f006883635b12c4fb49459260a4f971
+      internalID: 1021646802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 28
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e30d77a8bfb13648be20455f425d84e
+      internalID: 422627855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_game_ui_assets_04-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 28
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb64abf61f4d9c4dafbb904498b8676
+      internalID: -1171206156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 630c97cb5445e9b4c9b73ccba3af6f92
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Casual_game_ui_assets_04-removebg-preview_0: 2107066771
+      Casual_game_ui_assets_04-removebg-preview_1: 633559756
+      Casual_game_ui_assets_04-removebg-preview_10: 1823079158
+      Casual_game_ui_assets_04-removebg-preview_11: -87910939
+      Casual_game_ui_assets_04-removebg-preview_12: 711279711
+      Casual_game_ui_assets_04-removebg-preview_13: -1535754610
+      Casual_game_ui_assets_04-removebg-preview_14: -1615770640
+      Casual_game_ui_assets_04-removebg-preview_15: 1913262940
+      Casual_game_ui_assets_04-removebg-preview_16: 672027743
+      Casual_game_ui_assets_04-removebg-preview_17: -1999278969
+      Casual_game_ui_assets_04-removebg-preview_18: 23323509
+      Casual_game_ui_assets_04-removebg-preview_19: -2111972283
+      Casual_game_ui_assets_04-removebg-preview_2: -668283425
+      Casual_game_ui_assets_04-removebg-preview_20: -1459129790
+      Casual_game_ui_assets_04-removebg-preview_21: 1021646802
+      Casual_game_ui_assets_04-removebg-preview_22: 422627855
+      Casual_game_ui_assets_04-removebg-preview_23: -1171206156
+      Casual_game_ui_assets_04-removebg-preview_3: 881350079
+      Casual_game_ui_assets_04-removebg-preview_4: 539583446
+      Casual_game_ui_assets_04-removebg-preview_5: -517514633
+      Casual_game_ui_assets_04-removebg-preview_6: 1752170740
+      Casual_game_ui_assets_04-removebg-preview_7: 560715488
+      Casual_game_ui_assets_04-removebg-preview_8: 1040895902
+      Casual_game_ui_assets_04-removebg-preview_9: 931028493
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
