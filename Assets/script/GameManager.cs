@@ -59,6 +59,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public Transform GetLastBlock()
+    {
+        return lastBlock;
+    }
+
     public void BackToMenu()
     {
         Time.timeScale = 1f;
